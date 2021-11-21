@@ -50,10 +50,10 @@ public class ConsultasUsuarios extends ModeloDB {
         }
     }
     
-    public Usuarios buscarUsuario(String cedula){
+    public Usuarios buscarUsuario(int cedula){
         
         //crear objeto de tipo usuario
-        Usuarios usuario = new Usuarios ();
+        Usuarios usuario = new Usuarios();
         
         //almacenar en la DB
         Connection conexion = conectar();
@@ -66,7 +66,7 @@ public class ConsultasUsuarios extends ModeloDB {
             consultaSQL = conexion.prepareStatement(query);
             
             //organizar datos a buscar
-            consultaSQL.setString(1, cedula);
+            consultaSQL.setInt(1, cedula);
             
             //ejecutar la consulta
             resultadoSQL = consultaSQL.executeQuery();
@@ -79,11 +79,14 @@ public class ConsultasUsuarios extends ModeloDB {
                 usuario.setFijo(resultadoSQL.getString("fijo"));
                 usuario.setFijo(resultadoSQL.getString("movil"));
                 return usuario;
+                
             }else{
+                
                 return null;
             }
             
         }catch(Exception err){
+            
             System.out.println("Error!" + err);
             return null;
         }

@@ -30,6 +30,7 @@ public class Vista extends javax.swing.JFrame {
         boton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setBackground(new java.awt.Color(0, 0, 0));
 
         boton.setText("jButton1");
 
