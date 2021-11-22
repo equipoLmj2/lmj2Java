@@ -1,9 +1,12 @@
 
 package lmj2;
 
-import lmj2.controladores.Controlador;
-import lmj2.modelos.ModeloDB;
-import lmj2.vistas.Vista;
+import lmj2.controladores.ControladorHome;
+import lmj2.modelos.Ticket;
+import lmj2.modelos.Usuarios;
+import lmj2.modelos.Vehiculo;
+
+import lmj2.vistas.VistaHome;
 
 
 public class Lmj2 {
@@ -11,11 +14,13 @@ public class Lmj2 {
   
     public static void main(String[] args) {
         
-        ModeloDB modelo = new ModeloDB();
-        Vista vista = new Vista();
-        vista.setVisible(true);
+        VistaHome vistaHome = new VistaHome();
+        vistaHome.setVisible(true);
+        Usuarios usuario = new Usuarios();
+        Vehiculo vehiculo = new Vehiculo();
+        Ticket ticket = new Ticket();
         
-        Controlador controlador = new Controlador(modelo, vista);
+        ControladorHome controladorHome = new ControladorHome(vistaHome, usuario, vehiculo, ticket);
         
     }
     
