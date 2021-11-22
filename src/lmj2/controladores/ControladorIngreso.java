@@ -5,6 +5,7 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.text.SimpleDateFormat;
 import java.util.Date;
+import javax.swing.JOptionPane;
 import lmj2.modelos.ConsultasTickets;
 import lmj2.modelos.ConsultasUsuarios;
 import lmj2.modelos.ConsultasVehiculos;
@@ -43,8 +44,8 @@ public class ControladorIngreso implements ActionListener {
         vehiculo.setMarca(vistaIngreso.cajaMarca.getText());
         
         //registro de usuario
-        usuario.setNombres(vistaIngreso.cajaNombreU.getText());
         usuario.setCedula(Integer.parseInt(vistaIngreso.cajaCedula.getText()));
+        usuario.setNombres(vistaIngreso.cajaNombreU.getText());
         usuario.setFijo(vistaIngreso.cajaFijo.getText());
         usuario.setMovil(vistaIngreso.cajaCel.getText());
         
@@ -57,6 +58,17 @@ public class ControladorIngreso implements ActionListener {
         
         vehiculo.setPlaca(vistaIngreso.cajaPlaca.getText());
         
+        
+        if(consultasUsuarios.insertarUsuario(usuario)&&
+            consultasVehiculos.insertarVehiculo(vehiculo)&&
+            consultasTickets.insertarTicket(ticket)){
+            
+            JOptionPane.showMessageDialog(null, "Exito agregando los datos");
+            
+        }else{
+            
+            JOptionPane.showMessageDialog(null, "Error agregando los datos");
+        }
         
     }
     

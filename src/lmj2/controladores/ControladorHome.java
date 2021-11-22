@@ -42,6 +42,11 @@ public class ControladorHome implements ActionListener {
             VistaIngreso vistaIngreso = new VistaIngreso();
             vistaHome.setVisible(false);
             vistaIngreso.setVisible(true);
+            
+            
+            ControladorIngreso controladorIngreso = new ControladorIngreso(vistaIngreso, usuario, vehiculo, ticket);
+            
+            
         }
     }
     

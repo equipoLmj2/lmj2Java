@@ -3,12 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/C:/Users/johns/OneDrive/Desktop/lmj2Java/src/lmj2/Lmj2.java</file>
-            <file>file:/C:/Users/johns/OneDrive/Desktop/lmj2Java/src/lmj2/vistas/Vista.java</file>
             <file>file:/C:/Users/johns/OneDrive/Desktop/lmj2Java/src/lmj2/vistas/VistaIngreso.java</file>
-            <file>file:/C:/Users/johns/OneDrive/Desktop/lmj2Java/src/lmj2/modelos/ConsultasUsuarios.java</file>
+            <file>file:/C:/Users/johns/OneDrive/Desktop/lmj2Java/src/lmj2/controladores/ControladorIngreso.java</file>
+            <file>file:/C:/Users/johns/OneDrive/Desktop/lmj2Java/src/lmj2/controladores/ControladorHome.java</file>
+            <file>file:/C:/Users/johns/OneDrive/Desktop/lmj2Java/src/lmj2/modelos/Usuarios.java</file>
+            <file>file:/C:/Users/johns/OneDrive/Desktop/lmj2Java/src/lmj2/modelos/Vehiculo.java</file>
             <file>file:/C:/Users/johns/OneDrive/Desktop/lmj2Java/src/lmj2/modelos/ConsultasVehiculos.java</file>
             <file>file:/C:/Users/johns/OneDrive/Desktop/lmj2Java/src/lmj2/vistas/VistaHome.java</file>
+            <file>file:/C:/Users/johns/OneDrive/Desktop/lmj2Java/src/lmj2/modelos/ConsultasUsuarios.java</file>
         </group>
     </open-files>
 </project-private>
