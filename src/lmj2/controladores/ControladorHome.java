@@ -9,6 +9,7 @@ import lmj2.modelos.Usuarios;
 import lmj2.modelos.Vehiculo;
 import lmj2.vistas.VistaHome;
 import lmj2.vistas.VistaIngreso;
+import lmj2.vistas.VistaSalida;
 
 
 public class ControladorHome implements ActionListener {
@@ -25,16 +26,23 @@ public class ControladorHome implements ActionListener {
         this.vehiculo = vehiculo;
         this.ticket = ticket;
         
-        vistaHome.btnAgregar.addActionListener(this);
+        vistaHome.btnSalir.addActionListener(this);
     }
 
     @Override
     public void actionPerformed(ActionEvent e) {
         
         ConsultasVehiculos consultasVehiculos = new ConsultasVehiculos();
-        String placa = vistaHome.cajaPlaca.getText();
+        String placa = vistaHome.cajaIdUsuario.getText();
         
         if(consultasVehiculos.buscarVehiculo(placa) != null){
+            
+            VistaSalida vistaSalida = new VistaSalida();
+            vistaHome.setVisible(false);
+            vistaSalida.setVisible(true);
+            
+            ControladorSalida controladorSalida = new ControladorSalida(vistaSalida, usuario, vehiculo, ticket);
+            
             
         }else{
             

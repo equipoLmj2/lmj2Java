@@ -7,7 +7,7 @@ import java.sql.DriverManager;
 
 public class ModeloDB {
     
-    private String servidorDB = "jdbc:mysql://localhost/lmj2";
+    private String servidorDB = "jdbc:mysql://localhost/lmj2prueba";
     private String usuarioDB = "root";
     private String passwordDB = "";
 

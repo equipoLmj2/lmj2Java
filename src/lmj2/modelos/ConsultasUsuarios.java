@@ -91,4 +91,32 @@ public class ConsultasUsuarios extends ModeloDB {
             return null;
         }
     }
+    
+    public boolean actualizarUsuario(Ticket ticket){
+        
+        Connection conexion = conectar();
+        String query = "UPDATE tickets SET salida = ? WHERE id = ?";
+        
+        try{
+            
+            consultaSQL = conexion.prepareStatement(query);
+            
+            consultaSQL.setString(1, ticket.getSalida());
+            consultaSQL.setInt(2, ticket.getId());
+            
+            int resultado = consultaSQL.executeUpdate();
+            
+            //validar el resultado
+            if(resultado > 0 ){
+                return true;
+            }else{
+                return false;
+            }
+            
+        }catch(Exception err){
+            System.out.println("Error" + err);
+            return false;
+        }
+        
+    }
 }

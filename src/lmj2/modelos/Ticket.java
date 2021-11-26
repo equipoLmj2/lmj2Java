@@ -15,19 +15,17 @@ public class Ticket {
     private String placa_vehiculo;
     private String ingreso;
     private String salida;
-    private String estadia;
-    private int precio;
+    
 
     public Ticket() {
     }
 
-    public Ticket(int id, String placa_vehiculo, String ingreso, String salida, String estadia, int precio) {
+    public Ticket(int id, String placa_vehiculo, String ingreso, String salida) {
         this.id = id;
         this.placa_vehiculo = placa_vehiculo;
         this.ingreso = ingreso;
         this.salida = salida;
-        this.estadia = estadia;
-        this.precio = precio;
+        
     }
 
     public int getId() {
@@ -62,21 +60,7 @@ public class Ticket {
         this.salida = salida;
     }
 
-    public String getEstadia() {
-        return estadia;
-    }
-
-    public void setEstadia(String estadia) {
-        this.estadia = estadia;
-    }
-
-    public int getPrecio() {
-        return precio;
-    }
-
-    public void setPrecio(int precio) {
-        this.precio = precio;
-    }
+    
     
     
 }

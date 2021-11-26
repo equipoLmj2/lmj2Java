@@ -39,6 +39,10 @@ public class ControladorIngreso implements ActionListener {
         ConsultasVehiculos consultasVehiculos = new ConsultasVehiculos();
         ConsultasTickets consultasTickets = new ConsultasTickets();
         
+        
+        //registro placa
+        ticket.setPlaca_vehiculo(vistaIngreso.cajaPlaca.getText());
+        
         //registro de vehiculos
         vehiculo.setPlaca(vistaIngreso.cajaPlaca.getText());
         vehiculo.setMarca(vistaIngreso.cajaMarca.getText());
@@ -56,7 +60,7 @@ public class ControladorIngreso implements ActionListener {
         
         ticket.setIngreso(fechaEntrada);
         
-        vehiculo.setPlaca(vistaIngreso.cajaPlaca.getText());
+        vehiculo.setCc_usuario(Integer.parseInt(vistaIngreso.cajaCedula.getText()));
         
         
         if(consultasUsuarios.insertarUsuario(usuario)&&
